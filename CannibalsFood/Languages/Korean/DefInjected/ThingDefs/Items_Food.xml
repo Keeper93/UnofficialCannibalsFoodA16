@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <CannibalMealSimple.label>간단한 인육 식사</CannibalMealSimple.label>
+    <CannibalMealSimple.description>인육으로 급히 만든 요리입니다.</CannibalMealSimple.description>
+
+    <CannibalMealFine.label>좋은 인육 식사</CannibalMealFine.label>
+    <CannibalMealFine.description>인육과 다양한 재료를 조합하여 만든 다소 복잡한 요리입니다.</CannibalMealFine.description>
+
+    <CannibalMealLavish.label>호화로운 인육 식사</CannibalMealLavish.label>
+    <CannibalMealLavish.description>걸작 중의 걸작입니다! 몸과 마음, 영혼에까지 충분한 영양분을 공급해줄 것입니다.</CannibalMealLavish.description>
+	
+</LanguageData>

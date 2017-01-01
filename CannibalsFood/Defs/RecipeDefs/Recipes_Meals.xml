@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	<RecipeDef Name="CookCannibalMealSimple">
+		<defName>CookCannibalMealSimple</defName>
+		<label>cook simple cannibal meal</label>
+		<description>Cooks a straightforward meal from one human meat.</description>
+		<jobString>Cooking simple cannibal meal.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Human_Meat</li>
+					</thingDefs>
+				</filter>
+				<count>0.5</count>
+			</li>
+		</ingredients>
+		<products>
+			<CannibalMealSimple>1</CannibalMealSimple>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Human_Meat</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef ParentName="CookCannibalMealSimple">
+		<defName>CookCannibalMealSimpleNormal</defName>
+		<recipeUsers>
+			<li>FueledStove</li>
+			<li>ElectricStove</li>
+		</recipeUsers>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="CookCannibalMealSimple">
+		<defName>CookCannibalMealSimpleCampfire</defName>
+		<workAmount>1000</workAmount> <!-- other meals use WorkToMake stat -->
+		<recipeUsers>
+			<li>Campfire</li>
+		</recipeUsers>
+	</RecipeDef>
+
+
+	<RecipeDef>
+		<defName>CookCannibalMealFine</defName>
+		<label>cook fine cannibal meal</label>
+		<description>Cooks a somewhat complex meal from a combination of human meat and raw plant ingredients.</description>
+		<jobString>Cooking fine cannibal meal.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Human_Meat</li>
+					</thingDefs>
+				</filter>
+				<count>0.25</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>0.25</count>
+			</li>
+		</ingredients>
+		<products>
+			<CannibalMealFine>1</CannibalMealFine>
+		</products>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>Human_Meat</li>
+			</thingDefs>
+			<categories>
+				<li>PlantFoodRaw</li>
+			</categories>
+		</defaultIngredientFilter>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Human_Meat</li>
+			</thingDefs>
+			<categories>
+				<li>PlantFoodRaw</li>
+			</categories>
+		</fixedIngredientFilter>
+		<skillRequirements>
+			<li>
+				<skill>Cooking</skill>
+				<minLevel>6</minLevel>
+			</li>
+		</skillRequirements>
+		<workSkill>Cooking</workSkill>
+		<recipeUsers>
+			<li>FueledStove</li>
+			<li>ElectricStove</li>
+		</recipeUsers>
+	</RecipeDef>
+
+
+	<RecipeDef>
+		<defName>CookCannibalMealLavish</defName>
+		<label>cook lavish cannibal meal</label>
+		<description>Cooks a very complex meal from a combination of human meat and raw plant ingredients. Much of the ingredients are wasted.</description>
+		<jobString>Cooking lavish cannibal meal.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Human_Meat</li>
+					</thingDefs>
+				</filter>
+				<count>0.5</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>0.5</count>
+			</li>
+		</ingredients>
+		<products>
+			<CannibalMealLavish>1</CannibalMealLavish>
+		</products>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>Human_Meat</li>
+			</thingDefs>
+			<categories>
+				<li>PlantFoodRaw</li>
+			</categories>
+		</defaultIngredientFilter>
+			<fixedIngredientFilter>
+			<thingDefs>
+				<li>Human_Meat</li>
+			</thingDefs>
+			<categories>
+				<li>PlantFoodRaw</li>
+			</categories>
+		</fixedIngredientFilter>
+		<skillRequirements>
+			<li>
+				<skill>Cooking</skill>
+				<minLevel>10</minLevel>
+			</li>
+		</skillRequirements>
+		<workSkill>Cooking</workSkill>
+		<recipeUsers>
+			<li>FueledStove</li>
+			<li>ElectricStove</li>
+		</recipeUsers>
+	</RecipeDef>
+
+</RecipeDefs>
